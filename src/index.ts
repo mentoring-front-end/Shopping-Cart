@@ -1,2 +1,4 @@
-@import './index.css';
+import './index.css';
 
+console.log("adam");
+console.log("Abdillah");
