@@ -1,43 +1,50 @@
 const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode: "development",
-  entry: path.resolve(__dirname, './src/index.js'),
+  // for debugging using source map
+  devtool: 'eval-source-map',
+  // for development mode
+  mode: 'development',
+  // entry file for bundle the ts and compile to js
+  entry: './src/index.ts',
+  // module for developement
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: ['babel-loader'],
+        // if regex and extension file .ts (typescript)
+        test: /\.ts$/,
+        include: [path.resolve(__dirname, 'src')],
+        use: 'ts-loader',
       },
       {
-        test:/\.css$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          "css-loader",
-          "postcss-loader"
-        ]
-      },
-      {
-        test: /\.svg$/,
-        use: ['@svgr/webpack', 'url-loader'],
-      },
+        // if regex and extension file .ts (typescript)
+        test: /\.css$/,
+        include: [path.resolve(__dirname, 'src')],
+        use: ['style-loader', 'css-loader', 'postcss-loader'],
+      }
     ]
   },
+  // resolve extension to avoid bug
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.ts', '.js']
   },
+  // directory output for the compiled
   output: {
-    path: path.resolve(__dirname, './dist'),
+    publicPath: 'public',
+    // file name after compiling
     filename: 'bundle.js',
+    // directory file where the bundle is
+    path: path.resolve(__dirname, 'public'),
   },
   devServer: {
-    static: path.resolve(__dirname, './dist'),
+    static: './public'
   },
-  plugins: [
-    new MiniCssExtractPlugin({
-      filename: "index.css",
-    })
-  ]
+  // plugins: [
+  //   new HtmlWebpackPlugin({
+  //       template: __dirname + './public/index.html',
+  //       filename: 'index.html',
+  //       inject: 'body'
+  //   })
+  // ],
 };
