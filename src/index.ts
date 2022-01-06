@@ -1,4 +1,4 @@
-import './index.css';
+import '../sass/styles.scss';
 
-console.log("adam");
-console.log("Abdillah");
+let name = "adam";
+console.log(name);

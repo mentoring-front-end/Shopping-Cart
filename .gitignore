@@ -1,2 +1,6 @@
-# dependency
+# Dependency
 /node_modules
+
+# Production
+/public
+/sass
