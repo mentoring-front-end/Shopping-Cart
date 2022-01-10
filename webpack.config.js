@@ -5,7 +5,6 @@ const Webpack = require('webpack');
 module.exports = {
   entry: './src/index.ts',
   devtool: 'inline-source-map',
-  mode: 'development',
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Development',
