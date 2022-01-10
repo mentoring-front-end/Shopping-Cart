@@ -1,6 +1,5 @@
 # Dependency
-/node_modules
+node_modules
 
 # Production
-/public
-/sass
+public
