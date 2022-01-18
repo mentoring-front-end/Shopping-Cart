@@ -11,7 +11,13 @@ Clone this repo and start command below.
 ### Development server
 
 ```bash
-npm serve
+npm run serve
+```
+
+### Production
+
+```bash
+npm run build
 ```
 
 You can change port in `webpack.config.js`.

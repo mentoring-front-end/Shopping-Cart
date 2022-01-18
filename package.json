@@ -1,12 +1,11 @@
 {
   "name": "shopping-cart",
   "version": "1.0.0",
-  "description": "",
+  "description": "Built using Typescript, Webpack and SASS.",
   "main": "index.js",
   "scripts": {
-    "serve": "webpack serve --static --open",
-    "build": "webpack build --config ./webpack.config.js --stats verbose",
-    "prod": "webpack --mode production --env env=prod",
+    "build": "webpack build --config ./webpack.config.js --mode production --env env=prod",
+    "serve": "webpack serve --open --mode development --env env=dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,16 +20,17 @@
   },
   "homepage": "https://github.com/mentoring-front-end/Shopping-Cart#readme",
   "devDependencies": {
-    "cross-env": "^7.0.3",
+    "copy-webpack-plugin": "^10.2.0",
     "css-loader": "^6.5.1",
+    "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
-    "sass": "^1.45.2",
+    "sass": "^1.48.0",
     "sass-loader": "^12.4.0",
     "style-loader": "^3.3.1",
     "ts-loader": "^9.2.6",
     "typescript": "^4.5.4",
-    "webpack": "^5.65.0",
+    "webpack": "^5.66.0",
     "webpack-cli": "^4.9.1",
-    "webpack-dev-server": "^4.7.2"
+    "webpack-dev-server": "^4.7.3"
   }
 }
