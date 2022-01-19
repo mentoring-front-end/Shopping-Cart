@@ -1,0 +1,22 @@
+@use 'color';
+
+@mixin btn-cart {
+	width: 100px;
+	height: 30px;
+	background-color: color.$colorbg-maize-crayola;
+	border: none;
+	border-radius: 5px;
+	outline: none;
+	cursor: pointer;
+	color: color.$color-font-jet;
+	font-weight: 600;
+	font-size: 13px;
+
+	&:hover {
+		background-color: color.$colorbg-maize-metallic;
+	}
+
+	&:active {
+		background-color: color.$colorbg-maize-crayola-dark;
+	}
+}
