@@ -32,11 +32,6 @@ devServer: {
   },
 ```
 
-### Production build
-
-```bash
-npm run build
-```
 
 ## Features
 
