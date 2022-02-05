@@ -19,7 +19,7 @@ module.exports = {
 				test: /\.(png|jpe?g|svg)$/,
         loader: 'file-loader',
         options: {
-            name: './src/images/[name].[ext]',
+            name: './src/assets/[name].[ext]',
         },
 			}
 		],
@@ -34,7 +34,7 @@ module.exports = {
     }),
     new CopyPlugin({
       patterns: [
-        { from: "./src/template/images", to: "images" },
+        { from: "./src/assets", to: "images" },
       ],
     }),
   ],
