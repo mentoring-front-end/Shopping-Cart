@@ -10,39 +10,39 @@
 
 body {
 	font-family: font.$font-family;
+}
 
-	h1 {
-		text-align: center;
-		margin-top: 20px;
-	}
+h1 {
+	text-align: center;
+	margin-top: 20px;
+}
 
-	.card_container{
-		position: relative;
-		display: flex;
-		flex-direction: row;
+.card{
+	position: relative;
+	display: flex;
+	flex-direction: row;
+}
 
-		.card_component {
-			margin: 50px auto;
+.card__header {
+	margin: 50px auto;
+}
 
-			.card_description {
-				margin-top: 20px;
+.card__figure {
+	margin-top: 20px;
+}
 
-				.title {
-					font-weight: font.$font-size-reguler;
-					font-size: 0.875em;
-				}
+.card__title {
+	font-weight: font.$font-size-reguler;
+	font-size: 0.875em;
+}
 
-				.price {
-					font-weight: font.$font-size-semi-bold;
-					font-size: 1.125em;
-				}
-			}
+.card__price {
+	font-weight: font.$font-size-semi-bold;
+	font-size: 1.125em;
+}
 
-			.button_add_to_cart {
-				@include mixin.btn-cart;
-				margin-top: 10px;
-			}
-		}
-	}
+.btn {
+	@include mixin.btn-card;
+	margin-top: 10px;
 }
 
