@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "title": "Velvet Covvere",
+    "price": "400000"
+  },
+  {
+    "id": 2,
+    "title": "Candle in Glass Holder",
+    "price": "150000"
+  },
+  {
+    "id": 3,
+    "title": "Metal Photo Frame",
+    "price": "300000"
+  },
+  {
+    "id": 4,
+    "title": "Round Floor Mat",
+    "price": "350000"
+  },
+  {
+    "id": 5,
+    "title": "Class Light Holder",
+    "price": "260000"
+  },
+  {
+    "id": 6,
+    "title": "Flanner Duvet Cover Set",
+    "price": "550000"
+  },
+  {
+    "id": 7,
+    "title": "Fitted Cotton Sheet",
+    "price": "250000"
+  },
+  {
+    "id": 8,
+    "title": "Small Candle in a Small Jar",
+    "price": "150000"
+  },
+  {
+    "id": 9,
+    "title": "Checked Duvet Cover Set",
+    "price": "270000"
+  }
+]
