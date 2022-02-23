@@ -7,37 +7,128 @@ body {
 	font-family: font.$font-family;
 }
 
-h1 {
-	text-align: center;
-	margin-top: 20px;
-}
-
-.card{
-	position: relative;
+.card-component {
 	display: flex;
 	flex-direction: row;
 }
 
-.card__header {
+.card {
+	max-width: 310px;
+	height: 480px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	margin: 50px auto;
 }
 
-.card__figure {
-	margin-top: 20px;
+.card__header {
+	display: contents;
+}
+
+.card__body {
+	position: relative;
+	left: -80px;
+	top: -20px;
 }
 
 .card__title {
-	font-weight: font.$font-size-reguler;
-	font-size: 0.875em;
+	color: color.$color-font;
+	font-weight: font.$font-size-bold;
+	font-size: 	14px;
+	font-style: normal;
 }
 
 .card__price {
-	font-weight: font.$font-size-semi-bold;
-	font-size: 1.125em;
+	color: color.$color-font;
+	font-weight: font.$font-size-bold;
+	font-size: 20px;
+	font-style: normal;
+	line-height: 0;
+}
+
+.card__footer {
+	position: relative;
+	left: -100px;
+	top: -10px;
 }
 
 .btn {
 	@include mixin.btn-card;
-	margin-top: 10px;
 }
+
+@media only screen and (max-width: 640px) {
+	.card-component {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+@media only screen and (min-width: 641px) and (max-width: 1007px) {
+	.card-component {
+		display: flex;
+	}
+
+	.card {
+		width: 155px;
+	}
+	
+	.card__figure img {
+		width: 155px;
+		position: relative;
+		left: 0;
+	}
+
+	.card__body {
+		position: relative;
+		left: -20px;
+	}
+
+	.card__title {
+		font-size: 12px;
+	}
+
+	.card__price {
+		font-size: 16px;
+	}
+
+	.card__footer {
+		position: relative;
+		left: -26px;
+	}
+}
+
+// h1 {
+// 	text-align: center;
+// 	margin-top: 20px;
+// }
+
+// .card{
+// 	position: relative;
+// 	display: flex;
+// 	flex-direction: row;
+// }
+
+// .card__header {
+// 	margin: 50px auto;
+// }
+
+// .card__figure {
+// 	margin-top: 20px;
+// }
+
+// .card__title {
+// 	font-weight: font.$font-size-reguler;
+// 	font-size: 0.875em;
+// }
+
+// .card__price {
+// 	font-weight: font.$font-size-semi-bold;
+// 	font-size: 1.125em;
+// }
+
+// .btn {
+// 	@include mixin.btn-card;
+// 	margin-top: 10px;
+// }
 
